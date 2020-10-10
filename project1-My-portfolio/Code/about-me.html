@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(13, 13, 80);
+        }
+
+
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        
+  .container {
+
+display: grid;
+grid-template-areas:
+    "about-me"
+    
+     ;
+grid-gap: 0.75rm;
+}
+
+
+      
+
+
+        .about-me {
+            height: 40rem;
+            width: 92%;
+            background-image: linear-gradient(to right, rgb(19, 13, 70), rgb(17, 73, 138));
+            -moz-box-shadow: 10px 10px 5px rgb(22, 54, 121);
+            -webkit-box-shadow: 10px 10px 5px rgb(100, 139, 224);
+            box-shadow: 10px 10px 5px rgb(100, 139, 224);
+            -moz-border-radius: 25px;
+            -webkit-border-radius: 25px;
+            border-radius: 25px;
+            margin-left: 40px;
+            margin-top: 50px;
+            display: flex;
+            grid-area: "about-me";
+            display: grid;
+grid-template-areas:
+    "firstParagraph"
+    
+     ;
+grid-gap: 0.75rm;
+            
+
+        }
+
+        
+        .firstParagraph {
+            background-color: lightblue;
+            height: 34.375rem;
+            width: 75%;
+            margin-left: 12rem;
+
+            border: 1px solid darkblue;
+            border-radius: 25px;
+            margin-top: 1rem;
+            grid-area: "firstParagraph";
+    
+        }
+
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">    
+    <section class="about-me" style="padding-top: 1.25rem;padding-bottom: 1.25rem;">
+
+        <div class="firstParagraph">
+            <h1 style="text-align: center;font-size: 40px;font-weight: bolder;color: darkblue;">About me</h1>
+            <p style="font-size: 40px;margin-left: 10px; ">Hi, my name is leen, a wife and a mother of two lovely daughters, I have graduated from the Al-Hussein University with a bachelor of science in Chemistry.
+                I am really interested in coding as one of creative jobs. Also, I am anxious to dig into it by joining Orange Coding Academy.
+                
+                I hope you consider my application and to hear from you soon.
+                
+                Yours Faithfully,
+                Leen Awad</p>
+        </div>
+    </section>
+
+</div>
+
+
+
+
+
+
+    
+    
+</body>
+
+</html>
