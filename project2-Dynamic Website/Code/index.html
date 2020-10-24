@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="this is the log in page fot the website about forms & To-Do list & Calculator, Mathematical operations">
+  <meta name="keywords" content="coding, Html, CSS, Java Script, Bootstrap, Json, Jquery, Calculator, Calculation, Math, Operation, To-Do list, Forms, design, development, websites">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <title>Home Page</title>
+</head>
+<body>
+
+  <header id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <img src="willDo.png" alt="will Do logo" width="20%" style="background-color: white; opacity: 0.5;border-radius: 40px;" >
+      <a href="index.html">Home</a>
+      <a href="toDoList.html">To-Do List</a>
+      <a href="calculator.html">Calculator</a>
+    </div>
+  </header> 
+  <span style="font-size:40px;cursor:pointer;margin: 0.7rem;color: #db6400;" class="partOne" onclick="openNav()">&#9776;</span>
+
+
+
+  <!-- this is the body and it has two parts -->
+  <section id="body-container">
+    <div class="element" id="partOne">
+    <div class="sub-element">
+      <div>
+      
+    </div>
+      <form name="formOne" action="#">
+        <div class="form-group">
+          <label for="exampleInputEmail1">&#xf007; User Name</label>
+          <input name="username" type="text" class="form-control col-md-12" id="inputuserName"  placeholder="user name">
+          <small id="usernameVal" class="form-text" style="color: red;" hidden>Please enter your full name.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">&#xf199; Email</label>
+          <input name="email" type="text" class="form-control col-md-12" id="inputEmail"  placeholder="email@example.com">
+          <small id="emailVal" class="form-text" style="color: red;" hidden>Wrong email format.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">&#xf1fd; Date of birth</label>
+          <input name="birthday" type="text" class="form-control col-md-12" id="inputBirthday" placeholder="DD/MM/YYYY">
+          <small id="birthdayVal" class="form-text" style="color: red;"hidden>only DD/MM/YYY or DD-MM-YYYY format accepted.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">&#xf095; Phone Number</label>
+          <input name="phonenumber" type="text" class="form-control col-md-12" id="inputPhone" placeholder="phone number">
+          <small id="phoneVal" class="form-text" style="color: red;"hidden>wrong number format.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">&#xf13e; Password</label>
+          <input name="password" type="password" class="form-control col-md-12" id="inputPassword" placeholder="password">
+          <small id="passwordVal" class="form-text" style="color: red;" hidden>you password must have Capital letter and Sympols and numbers.</small>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkAgree" onclick="changed(this)">
+            <label class="form-check-label" for="gridCheck">
+              I agree to the <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+        <input id="session" type="button" disabled  onclick="validation('session')" value="Try It" class="btn btn-outline-dark col" style="margin: 8px;">
+        <input id="local" type="button" disabled  onclick="validation('local')" value="Permanent" class="btn btn-outline-dark next-button col " style="margin: 8px;">
+      </div>
+      <button   onclick="clear()" class="btn btn-outline-danger col">Clear</button>
+      </form>
+    </div>
+  </div>
+    <div class="element" id="partTwo">
+      <div class="img-container">
+        <img src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="Avatar" class="Avatarimage"">
+        <div class="middle">
+          <h5 id="namePreview"></h5>
+          <button onclick="SignOut()" class="text prev-button">Signout</button>
+        </div>
+      </div>
+      <form action="#" name="formTwo" class="formTwo">
+        <div>
+        <label id="pageTwoText" for="background">background color:</label>
+        <select name="background" id="background">
+          <option value="default">Default</option>
+          <option value="white">White</option>
+          <option value="black">Black</option>
+        </select>
+      </div>
+      <div>
+        <label id="pageTwoText" for="background">Font color:</label>
+        <select name="fontColor" id="fontColor">
+          <option value="defaultFont">Default</option>
+          <option value="white">White</option>
+          <option value="black">Black</option>
+        </select>
+      </div>
+      <div>
+        <label id="pageTwoText" for="background">Font family:</label>
+        <select name="fontFamily" id="fontFamily">
+          <option value="arial">Default</option>
+          <option value="mono">Syne</option>
+          <option value="amatic">Amatic</option>
+        </select>
+      </div>
+      <div style="display: flex; justify-content: space-evenly;">
+        <input class="text" onclick="userChoice()" type="button" value="Save" name="submit" id="submit">
+        <input class="text" onclick="resetSettings()" type="button" value="Reset" name="reset" id="reset">
+      </div>
+      </form>
+    </div>
+  </section>
+  
+
+
+  <footer>
+    
+    <p>Copyright &copy; 2020 Will-Do Team.</p>
+  </footer>
+<script src="js/index.js"></script>
+</body>
+</html>
