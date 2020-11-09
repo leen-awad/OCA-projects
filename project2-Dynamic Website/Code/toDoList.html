@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/toDoList.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <title>Todo List</title>
+</head>
+<body>
+  <header id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <img src="willDo.png" alt="will Do logo" width="20%" style="background-color: white; opacity: 0.5;border-radius: 40px;" >
+      <a href="index.html">Home</a>
+      <a href="toDoList.html">To-Do List</a>
+      <a href="calculator.html">Calculator</a>
+    </div>
+  </header>
+<span style="font-size:40px;cursor:pointer;margin: 0.7rem;color: #db6400;" onclick="openNav()">&#9776;</span>
+<section class="body-container">
+  <div class="container">
+    <div class="header">
+    <h1>what you will do?</h1>
+    <form class="todo-form">
+      <input type="text" class="todo-input" placeholder="Add a Todo...">
+      <button type="submit" class="add-button">Add</button>
+    </form>
+    <div style="display: flex;justify-content: center;">
+    <button class="delete-all-button">Remove All</button>
+  </div>
+  </div>
+  <hr style="width: 95%;">
+    <ul class="todo-items">
+    </ul>
+  </div>
+  <!-- <img src="https://i.pinimg.com/originals/9c/fb/09/9cfb09f0c029e1f8c938208a7e278d76.gif"> -->
+</section>
+  <footer>
+    <p>Copyright &copy; 2020 Will-Do Team.</p>
+  </footer>
+  <script type="text/javascript" src="js/toDoList.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Math, Calculator, Mathematical operations">
+    <meta name="keywords"
+        content="coding, Html, CSS, Java Script, Bootstrap, Json, Jquery, Calculator, Calculation, Math, Operation, Forms, design, development, websites">
+    <title>Calculater</title>
+    <link rel="stylesheet" href="styles/calculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+​
+<body>
+    <!-- the nav bar  -->
+    <header id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <img src="willDo.png" alt="will Do logo" width="20%" style="background-color: white; opacity: 0.5;border-radius: 40px;" >  
+          <a href="index.html">Home</a>
+            <a href="toDoList.html">To-Do List</a>
+            <a href="calculator.html">Calculator</a>
+            <!-- <a href="#">Contact</a> -->
+        </div>
+    </header>
+    <!-- the humbarger -->
+    <span style="font-size:40px;cursor:pointer;margin: 0.7rem;color: #db6400;" onclick="openNav()">&#9776;</span>
+​
+    <!-- Let's begen the party -->
+    <section class="calculater">
+        <div class="output">
+            <!-- the number will show before -->
+            <div data-previous-operand class="previous"></div>
+            <!-- the number will show after -->
+            <div data-current-operand class="current"></div>
+        </div>
+        <button data-all-clear class="span-tow">AC</button>
+        <button class="op" data-operation>n!</button>
+        <button class="op" data-operation>x^</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button class="op" data-operation>÷</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button class="op" data-operation>x</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button class="op" data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button class="op" data-operation>±</button>
+        <button class="op" data-operation>+</button>
+        <button data-equals class="span-four">=</button>
+        <button class="op" data-delete>DEL</button>
+    </section>
+​
+    <!-- footer -->
+    <footer>
+        <p>Copyright &copy; 2020 The Will Do Team.</p>
+    </footer>
+​
+    <script src="js/calculator.js"></script>
+</body>
+​
+</html>
