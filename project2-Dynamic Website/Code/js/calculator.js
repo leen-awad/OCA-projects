@@ -42,7 +42,7 @@ class Calculater {
           return
       }
   }
-  factorial = (n) => {
+  factorial(n) {
       if (n > 0 && n <= 1) {
           return 1;
       }else{
@@ -50,24 +50,25 @@ class Calculater {
       }
   }
   computeOneOperand(){
-      let computation; 
-      const current = parseFloat(this.currentOperand);
-      if(isNaN(current)) return;
-      switch (this.operation) {
-      case '±': 
-      computation = Math.abs(current);
-      break;
-      case 'n!':
-      computation = this.factorial(current);
-      break;
-      default:
-      return;
-              }
-  this.currentOperand = computation  // the result of computaion
-  this.operation = undefined
-  this.previousOperand = ''  // to make the previous empty
+                          let computation; 
+                          const current = parseFloat(this.currentOperand);
+                          if(isNaN(current)) return;
+                          switch (this.operation) {
+                              case '±': 
+                                  computation = Math.abs(current);
+                                  break;
+                              case 'n!':
+                                  computation = this.factorial(current);
+                                  break;
+                              default:
+                                  return;
+                              }
+                          this.currentOperand = computation  // the result of computaion
+                          this.operation = undefined
+                          this.previousOperand = ''  // to make the previous empty
   }
   computeTwoOperands(){
+      debugger;
       let computation; 
       const prev = parseFloat(this.previousOperand) // to convert the string to number
       const current = parseFloat(this.currentOperand)
@@ -102,6 +103,7 @@ class Calculater {
   return floatNumber.toLocaleString('en') // to make comas bstween numbers
   }
   updateDisplay(){    
+      debugger;
       this.currentOperandTextElement.innerText = 
       this.getDisplayNumber(this.currentOperand) 
       // we made a concation to show the operation next to the prev number 
@@ -145,7 +147,7 @@ deleteButton.addEventListener('click', button => {
 calculater.delete()
 calculater.updateDisplay()
 });
-//navigation bar functions.
+//  console.log(factorial(4));
 function openNav() {
 document.getElementById("myNav").style.display = "block";
 }
@@ -153,35 +155,3 @@ function closeNav() {
 document.getElementById("myNav").style.display = "none";
 }
 
-let backgroudSession = sessionStorage.getItem('background');
-let fontFamilySession = sessionStorage.getItem('font-family');
-let fontColorSession = sessionStorage.getItem('color');
-
-if(backgroudSession != null){
-  if(backgroudSession == "white"){
-    document.body.style.background =  `background: linear-gradient(
-      to right,
-      rgba(201, 195, 195, 0.726),
-      rgba(219, 126, 50, 0.6)
-    )`;
-  }else{
-  document.body.style.background = sessionStorage.getItem('background');
-  }
-}
-
-if(fontFamilySession != null){
-  $(document).ready(function(){
-    $("body,label").css("font-family",fontFamilySession);
-  });
-}
-
-if(fontColorSession != null){
-  $(document).ready(function(){
-    $("label , p").css("color",fontColorSession);
-  });
-  if(fontColorSession == "#db6400"){
-    $(document).ready(function(){
-      $("p").css("color",'white');
-    });
-  }
-}
